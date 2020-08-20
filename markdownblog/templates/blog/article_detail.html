@@ -11,6 +11,8 @@
     <h1>{{ object.title }}</h1>
     {{ object.markdown_to_html|safe }}
 
+    <small><a href="{% url 'article:all' %}">Back</a></small>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
     <script>
       hljs.initHighlightingOnLoad();
