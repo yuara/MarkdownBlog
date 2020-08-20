@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/a11y-dark.min.css">
+
+  </head>
+  <body>
+    <h1>{% for article in object_list %}</h1>
+    <h3><a href="{% url 'article:one' pk=article.pk %}">{{ article.title }}</h3>
+    {% endfor %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
+</html>

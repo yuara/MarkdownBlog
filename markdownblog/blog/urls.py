@@ -1,4 +1,9 @@
 from django.urls import path
-from .views import ArticleDetailView
+from . import views
 
-urlpatterns = [path("article/<int:pk>/", ArticleDetailView.as_view())]
+app_name = "article"
+
+urlpatterns = [
+    path("", views.ArticleListView.as_view(), name="all"),
+    path("<int:pk>/", views.ArticleDetailView.as_view(), name="one"),
+]
